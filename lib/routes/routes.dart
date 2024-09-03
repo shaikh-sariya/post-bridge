@@ -8,11 +8,11 @@ extension AppPageExtension on PAGES {
       case PAGES.home:
         return '/';
       case PAGES.text:
-        return 'text';
+        return '/text';
       case PAGES.video:
-        return 'video';
+        return '/video';
       case PAGES.image:
-        return 'image';
+        return '/image';
     }
   }
 

@@ -13,6 +13,10 @@ class AppRouter {
   // Global key for accessing the root navigator state.
   static final _rootNavigator = GlobalKey<NavigatorState>(debugLabel: 'root');
 
+  // Global key for accessing the shell navigator state.
+  static final _shellNavigatorKey =
+      GlobalKey<NavigatorState>(debugLabel: 'shell');
+
   // Initial location for the app, pointing to the overview screen.
   static final _initialLocation = PAGES.home.screenPath;
 
@@ -26,6 +30,39 @@ class AppRouter {
     initialLocation: _initialLocation,
     observers: [MyRouteObserver()],
     // List of routes defined for the application.
-    routes: [],
+    routes: [
+      ShellRoute(
+        navigatorKey: _shellNavigatorKey,
+        // Builder function for creating the HomePage and providing the
+        // HomeCubit.
+        builder: (context, state, child) => BlocProvider(
+          create: (context) => sl<HomeCubit>(),
+          child: HomePage(key: state.pageKey, child: child),
+        ),
+        routes: [
+          GoRoute(
+            path: PAGES.text.screenPath,
+            name: PAGES.text.screenName,
+            // Builder function for creating the MyLeadsPage and providing the
+            // MyLeadsCubit.
+            builder: (context, state) => const Scaffold(body: Placeholder()),
+          ),
+          GoRoute(
+            path: PAGES.video.screenPath,
+            name: PAGES.video.screenName,
+            // Builder function for creating the MyLeadsPage and providing the
+            // MyLeadsCubit.
+            builder: (context, state) => const Scaffold(body: Placeholder()),
+          ),
+          GoRoute(
+            path: PAGES.image.screenPath,
+            name: PAGES.image.screenName,
+            // Builder function for creating the MyLeadsPage and providing the
+            // MyLeadsCubit.
+            builder: (context, state) => const Scaffold(body: Placeholder()),
+          ),
+        ],
+      ),
+    ],
   );
 }
