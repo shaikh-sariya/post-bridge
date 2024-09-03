@@ -1,0 +1,62 @@
+name: post_bridge
+description: "PostBridge is an intuitive Flutter app designed to connect users with diverse content through a streamlined navigation experience. Featuring a clean and user-friendly navigation bar with three tabs—Text, Video, and Image—PostBridge allows users to effortlessly browse and view various types of posts. Each post includes a share button that generates a unique link. If the PostBridge app is installed, clicking the link will direct users to the specific post within the app. If the app is not installed, users are redirected to a web page displaying the post. The app is designed to work seamlessly on both mobile and web platforms, ensuring a versatile and accessible content sharing experience."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.1
+
+dependencies:
+
+  bloc: ^8.1.4
+  cached_network_image: ^3.4.1
+  cupertino_icons: ^1.0.8
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  flutter_screenutil: ^5.9.3
+  go_router: ^14.2.7
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^6.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
