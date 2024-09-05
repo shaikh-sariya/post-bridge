@@ -18,5 +18,8 @@ Future<void> init() async {
     ..registerFactory(HomeCubit.new)
 
     // Register TextCubit as a factory, providing dependencies.
-    ..registerFactory(TextCubit.new);
+    ..registerFactory(TextCubit.new)
+
+    // Register VideoCubit as a factory, providing dependencies.
+    ..registerFactory(VideoCubit.new);
 }

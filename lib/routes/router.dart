@@ -53,7 +53,12 @@ class AppRouter {
           GoRoute(
             path: PAGES.video.screenPath,
             name: PAGES.video.screenName,
-            builder: (context, state) => const Scaffold(body: Placeholder()),
+            // Builder function for creating the VideoPage and providing the
+            // VideoCubit.
+            builder: (context, state) => BlocProvider(
+              create: (context) => sl<VideoCubit>(),
+              child: VideoPage(key: state.pageKey),
+            ),
           ),
           GoRoute(
             path: PAGES.image.screenPath,

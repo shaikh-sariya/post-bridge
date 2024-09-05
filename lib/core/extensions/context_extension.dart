@@ -17,4 +17,7 @@ extension ContextExtension on BuildContext {
 
   /// Gets the TextCubit from the context.
   TextCubit get textCubit => read<TextCubit>();
+
+  /// Gets the VideoCubit from the context.
+  VideoCubit get videoCubit => read<VideoCubit>();
 }
