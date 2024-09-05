@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
     final textTheme = context.theme.textTheme;
 
     return Scaffold(
+      appBar: AppBar(title: Text(AppStrings.appTitle), centerTitle: true),
       body: SafeArea(
         child: Row(
           children: [

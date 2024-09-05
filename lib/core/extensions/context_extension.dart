@@ -14,4 +14,7 @@ extension ContextExtension on BuildContext {
 
   /// Gets the HomeCubit from the context.
   HomeCubit get homeCubit => read<HomeCubit>();
+
+  /// Gets the TextCubit from the context.
+  TextCubit get textCubit => read<TextCubit>();
 }

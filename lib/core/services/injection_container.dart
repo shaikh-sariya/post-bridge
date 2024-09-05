@@ -15,5 +15,8 @@ Future<void> init() async {
     ..registerLazySingleton(Dio.new)
 
     // Register HomeCubit as a factory, providing dependencies.
-    ..registerFactory(HomeCubit.new);
+    ..registerFactory(HomeCubit.new)
+
+    // Register TextCubit as a factory, providing dependencies.
+    ..registerFactory(TextCubit.new);
 }

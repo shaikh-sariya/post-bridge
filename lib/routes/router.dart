@@ -18,7 +18,7 @@ class AppRouter {
       GlobalKey<NavigatorState>(debugLabel: 'shell');
 
   // Initial location for the app, pointing to the overview screen.
-  static final _initialLocation = PAGES.home.screenPath;
+  static final _initialLocation = PAGES.text.screenPath;
 
   // Getter for accessing the GoRouter instance.
   static GoRouter get router => _router;
@@ -43,22 +43,21 @@ class AppRouter {
           GoRoute(
             path: PAGES.text.screenPath,
             name: PAGES.text.screenName,
-            // Builder function for creating the MyLeadsPage and providing the
-            // MyLeadsCubit.
-            builder: (context, state) => const Scaffold(body: Placeholder()),
+            // Builder function for creating the TextPage and providing the
+            // TextCubit.
+            builder: (context, state) => BlocProvider(
+              create: (context) => sl<TextCubit>(),
+              child: TextPage(key: state.pageKey),
+            ),
           ),
           GoRoute(
             path: PAGES.video.screenPath,
             name: PAGES.video.screenName,
-            // Builder function for creating the MyLeadsPage and providing the
-            // MyLeadsCubit.
             builder: (context, state) => const Scaffold(body: Placeholder()),
           ),
           GoRoute(
             path: PAGES.image.screenPath,
             name: PAGES.image.screenName,
-            // Builder function for creating the MyLeadsPage and providing the
-            // MyLeadsCubit.
             builder: (context, state) => const Scaffold(body: Placeholder()),
           ),
         ],
