@@ -21,6 +21,8 @@ export 'package:post_bridge/core/theme/theme.dart';
 export 'package:post_bridge/core/theme/typography.dart';
 export 'package:post_bridge/modules/home/presentation/cubit/home_cubit.dart';
 export 'package:post_bridge/modules/home/presentation/pages/home.dart';
+export 'package:post_bridge/modules/home/routes/image/presentation/cubit/image_cubit.dart';
+export 'package:post_bridge/modules/home/routes/image/presentation/pages/image.dart';
 export 'package:post_bridge/modules/home/routes/text/presentation/cubit/text_cubit.dart';
 export 'package:post_bridge/modules/home/routes/text/presentation/pages/text.dart';
 export 'package:post_bridge/modules/home/routes/video/presentation/cubit/video_cubit.dart';

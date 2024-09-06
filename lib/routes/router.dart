@@ -63,7 +63,12 @@ class AppRouter {
           GoRoute(
             path: PAGES.image.screenPath,
             name: PAGES.image.screenName,
-            builder: (context, state) => const Scaffold(body: Placeholder()),
+            // Builder function for creating the ImagePage and providing the
+            // ImageCubit.
+            builder: (context, state) => BlocProvider(
+              create: (context) => sl<ImageCubit>(),
+              child: ImagePage(key: state.pageKey),
+            ),
           ),
         ],
       ),
